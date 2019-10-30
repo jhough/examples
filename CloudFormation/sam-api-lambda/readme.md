@@ -1,4 +1,4 @@
-# Launching AWS Lambda fronted with AWS API Gateway using AWS SAM
+# Launching AWS Lambda fronted with AWS API Gateway using AWS SAM CLI
 
 This is a simple example which uses a Lambda function written in Python. These services are deployed using AWS Serverless Application Model (SAM). SAM is a superset of AWS CloudFormation.
 
