@@ -2,9 +2,11 @@
 
 This is a simple example which uses a Lambda function written in Python. These services are deployed using AWS Serverless Application Model (SAM). SAM is a superset of AWS CloudFormation.
 
-Prerequisites: Have SAM CLI installed:
+*Prerequisites:*
+1. Have AWS access key installed.
+2. Have SAM CLI installed:
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
-
+3. Have access to an S3 bucket where the SAM deployment/config information will be stored.
 
 ## SAM Commands
 
