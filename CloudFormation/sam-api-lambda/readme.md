@@ -1,5 +1,12 @@
-* SAM Commands
+# Launching AWS Lambda fronted with AWS API Gateway using AWS SAM
 
+This is a simple example which uses a Lambda function written in Python. These services are deployed using AWS Serverless Application Model (SAM). SAM is a superset of AWS CloudFormation.
+
+Prerequisites: Have SAM CLI installed:
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
+
+
+## SAM Commands
 
 sam validate --template sam_template.yaml
 
@@ -16,6 +23,6 @@ sam logs --stack-name serverless-time-fcn --name TimeFunction --tail
 
 aws cloudformation delete-stack --stack-name serverless-time-fcn
 
-* TEST API:
+## Test The API:
 
 curl https://APIIDGOESHERE.execute-api.us-east-1.amazonaws.com/Prod/time
