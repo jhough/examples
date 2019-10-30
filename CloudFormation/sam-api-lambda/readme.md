@@ -8,6 +8,7 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/s
 
 ## SAM Commands
 
+```
 sam validate --template sam_template.yaml
 
 SKIP: sam build --build-dir lambda --template sam_template.yaml
@@ -22,7 +23,10 @@ sam logs --stack-name serverless-time-fcn --name TimeFunction --tail
 
 
 aws cloudformation delete-stack --stack-name serverless-time-fcn
+```
 
 ## Test The API:
 
+```
 curl https://APIIDGOESHERE.execute-api.us-east-1.amazonaws.com/Prod/time
+```
