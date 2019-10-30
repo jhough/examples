@@ -18,15 +18,23 @@ sam package --template-file sam_template.yaml --s3-bucket jimsbigdata --output-t
 sam deploy  --template-file cf_template.yaml --stack-name serverless-time-fcn --capabilities CAPABILITY_IAM
 
 aws cloudformation describe-stack-resources --stack-name serverless-time-fcn
+```
+Look for the RestApi PhysicalResourceId and copy it for below.
 
+
+You can open a second command line window and enter this to get the log file output:
+```
 sam logs --stack-name serverless-time-fcn --name TimeFunction --tail
-
-
-aws cloudformation delete-stack --stack-name serverless-time-fcn
 ```
 
 ## Test The API:
 
 ```
 curl https://APIIDGOESHERE.execute-api.us-east-1.amazonaws.com/Prod/time
+```
+
+## Delete the SAM/CloudFormation stack:
+
+```
+aws cloudformation delete-stack --stack-name serverless-time-fcn
 ```
