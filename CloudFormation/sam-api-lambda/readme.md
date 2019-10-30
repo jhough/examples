@@ -8,6 +8,13 @@ This is a simple example which uses a Lambda function written in Python. These s
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
 3. Have access to an S3 bucket where the SAM deployment/config information will be stored.
 
+## Get this code
+
+```
+git clone git://github.com/jhough/examples.git
+cd examples/CloudFormation/sam-api-lambda/
+```
+
 ## SAM Commands
 
 ```
