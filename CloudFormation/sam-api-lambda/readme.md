@@ -37,7 +37,7 @@ sam logs --stack-name serverless-time-fcn --name TimeFunction --tail
 ## Test The API:
 
 ```
-curl --include --request GET --header "Content-Type: application/json" https://RESTAPI-PHYSICALRESOURCEID.execute-api.us-east-1.amazonaws.com/Prod/time
+curl --include --request GET https://RESTAPI-PHYSICALRESOURCEID.execute-api.us-east-1.amazonaws.com/Prod/time
 ```
 
 ## Delete the SAM/CloudFormation stack:
