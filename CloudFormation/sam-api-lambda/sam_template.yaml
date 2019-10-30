@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Returns the current time
+
+Resources:
+#? use the CF API GW so can use  AuthorizationType: NONE  # or AWS_IAM, CUSTOM, COGNITO_USER_POOLS
+
+  TimeFunction:
+    # This resource creates a Lambda function.
+    Type: AWS::Serverless::Function
+    Properties:
+      # This function uses the Python ver 3.6 runtime.
+      Runtime: python3.6
+      # This is the Lambda function's handler.
+      Handler: index.lambda_handler
+      # The local location of the Lambda function code.
+      CodeUri: ./lambda/get-time/index.py
+      # Event sources to attach to this function. In this case, we are attaching
+      # one API Gateway endpoint to the Lambda function. The function is
+      # called when a HTTP request is made to the API Gateway endpoint.
+      Events:
+        MyTimeApi:
+          # Define an API Gateway endpoint that responds to HTTP GET at /time
+          Type: Api
+          Properties:
+            Path: /time
+            Method: GET
+#            RestApiId: !Ref TimeAPI
+            Auth:
+              Authorizer: null #set auth config on an individual path when no DefaultAuthorizer is specified
